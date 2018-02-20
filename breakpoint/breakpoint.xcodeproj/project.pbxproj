@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		14677A13203C7B6300FF4D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A12203C7B6300FF4D1D /* AppDelegate.swift */; };
-		14677A15203C7B6300FF4D1D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A14203C7B6300FF4D1D /* FirstViewController.swift */; };
-		14677A17203C7B6300FF4D1D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A16203C7B6300FF4D1D /* SecondViewController.swift */; };
+		14677A15203C7B6300FF4D1D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A14203C7B6300FF4D1D /* FeedViewController.swift */; };
+		14677A17203C7B6300FF4D1D /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A16203C7B6300FF4D1D /* GroupsViewController.swift */; };
 		14677A1A203C7B6300FF4D1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14677A18203C7B6300FF4D1D /* Main.storyboard */; };
 		14677A1C203C7B6300FF4D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14677A1B203C7B6300FF4D1D /* Assets.xcassets */; };
 		14677A1F203C7B6300FF4D1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14677A1D203C7B6300FF4D1D /* LaunchScreen.storyboard */; };
@@ -27,8 +27,8 @@
 		0A9906F2476CEA36B1F9A49A /* Pods_breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14677A0F203C7B6300FF4D1D /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14677A12203C7B6300FF4D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14677A14203C7B6300FF4D1D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		14677A16203C7B6300FF4D1D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		14677A14203C7B6300FF4D1D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		14677A16203C7B6300FF4D1D /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		14677A19203C7B6300FF4D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14677A1B203C7B6300FF4D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14677A1E203C7B6300FF4D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 		14677A26203C7C9600FF4D1D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				14677A14203C7B6300FF4D1D /* FirstViewController.swift */,
-				14677A16203C7B6300FF4D1D /* SecondViewController.swift */,
+				14677A14203C7B6300FF4D1D /* FeedViewController.swift */,
+				14677A16203C7B6300FF4D1D /* GroupsViewController.swift */,
 				14677A2F203C8D7000FF4D1D /* AuthViewController.swift */,
 				14677A31203C8DB100FF4D1D /* LoginViewController.swift */,
 			);
@@ -289,12 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				14677A32203C8DB100FF4D1D /* LoginViewController.swift in Sources */,
-				14677A17203C7B6300FF4D1D /* SecondViewController.swift in Sources */,
+				14677A17203C7B6300FF4D1D /* GroupsViewController.swift in Sources */,
 				14677A13203C7B6300FF4D1D /* AppDelegate.swift in Sources */,
 				14F807D3203C939000A84609 /* AuthService.swift in Sources */,
 				14677A30203C8D7000FF4D1D /* AuthViewController.swift in Sources */,
 				14677A36203C908900FF4D1D /* ShadowView.swift in Sources */,
-				14677A15203C7B6300FF4D1D /* FirstViewController.swift in Sources */,
+				14677A15203C7B6300FF4D1D /* FeedViewController.swift in Sources */,
 				14677A34203C8DFF00FF4D1D /* InsetTextField.swift in Sources */,
 				14677A2E203C82E100FF4D1D /* DataService.swift in Sources */,
 			);
