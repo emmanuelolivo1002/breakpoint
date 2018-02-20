@@ -22,6 +22,7 @@
 		14F807D3203C939000A84609 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F807D2203C939000A84609 /* AuthService.swift */; };
 		14F807D7203CB29F00A84609 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F807D6203CB29F00A84609 /* MeViewController.swift */; };
 		14F807D9203CB84A00A84609 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F807D8203CB84A00A84609 /* CreatePostViewController.swift */; };
+		14F807DB203CBC5000A84609 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F807DA203CBC5000A84609 /* UIViewExtension.swift */; };
 		B28C51E825E87CF3B3D339E2 /* Pods_breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9906F2476CEA36B1F9A49A /* Pods_breakpoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		14F807D2203C939000A84609 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		14F807D6203CB29F00A84609 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		14F807D8203CB84A00A84609 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		14F807DA203CBC5000A84609 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		23D1A01EB2BA1107A0AF4C26 /* Pods-breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-breakpoint/Pods-breakpoint.release.xcconfig"; sourceTree = "<group>"; };
 		C5A3498C9D7EA97C23AE646E /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 		14677A29203C7CB000FF4D1D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				14F807DA203CBC5000A84609 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				14677A13203C7B6300FF4D1D /* AppDelegate.swift in Sources */,
 				14F807D3203C939000A84609 /* AuthService.swift in Sources */,
 				14677A30203C8D7000FF4D1D /* AuthViewController.swift in Sources */,
+				14F807DB203CBC5000A84609 /* UIViewExtension.swift in Sources */,
 				14677A36203C908900FF4D1D /* ShadowView.swift in Sources */,
 				14F807D9203CB84A00A84609 /* CreatePostViewController.swift in Sources */,
 				14677A15203C7B6300FF4D1D /* FeedViewController.swift in Sources */,

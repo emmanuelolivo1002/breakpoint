@@ -20,7 +20,12 @@ class CreatePostViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Set self as textview delegate
         postTextView.delegate = self
+        
+        // Set bind to keyboard extension to send button
+        sendButton.bindToKeyboard()
+        
     }
 
     // MARK: Delegate methods
