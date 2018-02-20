@@ -22,7 +22,6 @@ class MeViewController: UIViewController {
     }
     
     // MARK: Actions
-
     @IBAction func signOutButtonPressed(_ sender: Any) {
         //Sign out code
     }
