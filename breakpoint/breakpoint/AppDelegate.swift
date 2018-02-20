@@ -18,6 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        
+        // If there is no current user logged in
+        if Auth.auth().currentUser == nil {
+            // Select main storyboard
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            
+            // Select AuthViewController
+            let authViewController = storyboard.instantiateViewController(withIdentifier: "AuthViewController")
+            
+            // Make window dissappear and present AuthViewController wherever we are if user is logged out
+            window?.makeKeyAndVisible()
+            window?.rootViewController?.present(authViewController, animated: true, completion: nil)
+            
+        }
+        
+        
         return true
     }
 

@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="750" y="553"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="OV8-s3-yeD">
@@ -199,6 +199,9 @@
                                                 <state key="normal" title="LOGIN WITH FB">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInWithFacebookButtonPressed:" destination="Ktt-4P-58S" eventType="touchUpInside" id="1XL-4s-NYr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2S3-er-Lg5">
                                                 <rect key="frame" x="0.0" y="135" width="300" height="57.5"/>
@@ -207,6 +210,9 @@
                                                 <state key="normal" title="LOGIN WITH G+">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInWithGooglePlusButtonPressed:" destination="Ktt-4P-58S" eventType="touchUpInside" id="tFc-Ko-ofa"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-Uf-PIa">
                                                 <rect key="frame" x="0.0" y="202.5" width="300" height="57.5"/>
@@ -225,6 +231,10 @@
                                         <state key="normal" title=" BY EMAIL" image="emailIcon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInWithEmailButtonPressed:" destination="Ktt-4P-58S" eventType="touchUpInside" id="gkc-hS-xKI"/>
+                                            <segue destination="zcL-jf-18f" kind="show" id="Kzr-FJ-OIp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.27058823529411763" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -257,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nt-Su-Xeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1542" y="139"/>
+            <point key="canvasLocation" x="-1638" y="0.0"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="oEf-ej-BAW">
@@ -274,6 +284,9 @@
                                     <constraint firstAttribute="height" constant="20" id="Nq5-Dw-J29"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonWasPressed:" destination="zcL-jf-18f" eventType="touchUpInside" id="wFV-6t-Cva"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGb-9p-gob">
                                 <rect key="frame" x="147.5" y="240" width="80" height="33"/>
@@ -284,6 +297,9 @@
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButtonPressed:" destination="zcL-jf-18f" eventType="touchUpInside" id="S2x-EJ-0ei"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="97g-SA-fWI">
                                 <rect key="frame" x="36" y="60" width="303" height="160"/>
@@ -329,10 +345,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ev7-d5-K1e"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="sdg-zs-9vg" id="Ycn-pt-IVg"/>
+                        <outlet property="passwordTextField" destination="naS-JI-AV0" id="Fb3-6k-tCI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uoj-80-m6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783.20000000000005" y="158.77061469265368"/>
+            <point key="canvasLocation" x="-839" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
