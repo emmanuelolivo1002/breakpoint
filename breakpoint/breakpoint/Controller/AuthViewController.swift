@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AuthViewController: UIViewController {
 
@@ -25,12 +26,20 @@ class AuthViewController: UIViewController {
     @IBAction func signInWithGooglePlusButtonPressed(_ sender: Any) {
     }
     
+    // MARK: Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    // Dissmiss view if user is logged in
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if Auth.auth().currentUser != nil {
+            dismiss(animated: true, completion: nil)
+        }
+    }
     
 
 }

@@ -17,6 +17,7 @@ class CreatePostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var sendButton: UIButton!
     
+    // MARK: Funtions
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +27,12 @@ class CreatePostViewController: UIViewController, UITextViewDelegate {
         // Set bind to keyboard extension to send button
         sendButton.bindToKeyboard()
         
+    }
+    
+    // Set userLabel to be the email of current user
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        userLabel.text = Auth.auth().currentUser?.email
     }
 
     // MARK: Delegate methods
