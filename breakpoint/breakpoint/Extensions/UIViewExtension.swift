@@ -17,7 +17,7 @@ extension UIView {
     
     // Objective C function to set animation
     @objc func keyboardWillChange(_ notification: NSNotification) {
-        
+      
         // Get duration of keyboard animation
         let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
         
