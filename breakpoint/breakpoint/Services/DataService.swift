@@ -38,27 +38,71 @@ class DataService {
         return _REF_FEED
     }
     
+    
+    // MARK: Functions
+    
     // Function to create new users in Database
     func createFirebaseUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
+    }
+    
+    // Function to get username for a specific uid
+    func getUsername(forUID uid: String, handler: @escaping (_ username: String) -> ()) {
+        
+        // Get a snapshot from the Users table
+        REF_USERS.observeSingleEvent(of: .value) { (usernameSnapshot) in
+            
+            // create a Snapshot otherwise return
+            guard let usernameSnapshot = usernameSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            // loop through snapshot
+            for user in usernameSnapshot {
+                // user is equal to the uid return its email
+                if user.key == uid {
+                    handler(user.childSnapshot(forPath: "email").value as! String)
+                }
+            }
+        }
     }
     
     // Function to upload post
     func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
         
         if groupKey != nil {
-            // if group key exists send to group ref
-            
-            
+            // if group key exists send to group
             
         } else {
             // send to feed
-            
             REF_FEED.childByAutoId().updateChildValues(["content" : message, "senderId" : uid])
             sendComplete(true)
-            
         }
+    }
+    
+    // Function to get all messages of the Feed
+    func getAllFeedMessages (handler: @escaping (_ messages: [Message]) -> ()) {
+       
+        // Set preliminary messageArray
+        var messageArray = [Message]()
         
+        // Get snapshot of messages in feed
+        REF_FEED.observeSingleEvent(of: .value) { (feedMessageSnapshot) in
+            guard let feedMessageSnapshot = feedMessageSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            // Loop through snapshot and append message values to messageArray
+            for message in feedMessageSnapshot {
+                // Get content and senderId
+                let content = message.childSnapshot(forPath: "content").value as! String
+                let senderId = message.childSnapshot(forPath: "senderId").value as! String
+                
+                // Set message as a Message object with content and senderId
+                let message = Message(content: content, senderId: senderId)
+                
+                // Append message to messageArray
+                messageArray.append(message)
+            }
+            // Return the messageArray to the handler after for loop is done
+            handler(messageArray)
+        }
     }
     
     

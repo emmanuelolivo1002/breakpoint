@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1418AA6B203DC97E006C100F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA6A203DC97E006C100F /* Message.swift */; };
 		14677A13203C7B6300FF4D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A12203C7B6300FF4D1D /* AppDelegate.swift */; };
 		14677A15203C7B6300FF4D1D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A14203C7B6300FF4D1D /* FeedViewController.swift */; };
 		14677A17203C7B6300FF4D1D /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A16203C7B6300FF4D1D /* GroupsViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0A9906F2476CEA36B1F9A49A /* Pods_breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1418AA6A203DC97E006C100F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		14677A0F203C7B6300FF4D1D /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14677A12203C7B6300FF4D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14677A14203C7B6300FF4D1D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		14677A28203C7CAA00FF4D1D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1418AA6A203DC97E006C100F /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				14677A15203C7B6300FF4D1D /* FeedViewController.swift in Sources */,
 				14677A34203C8DFF00FF4D1D /* InsetTextField.swift in Sources */,
 				14677A2E203C82E100FF4D1D /* DataService.swift in Sources */,
+				1418AA6B203DC97E006C100F /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
