@@ -105,5 +105,65 @@ class DataService {
         }
     }
     
+    // Function for searching emails
+    func getEmail(forSearchQuery query: String, handler: @escaping (_ emailArray: [String]) -> ()) {
+        // Initialize array of emails that will be shown
+        var emailArray = [String]()
+        
+        // Get snapshot of all users
+        REF_USERS.observe(.value) { (userSnapshot) in
+            
+            // Create userSnapshot otherwise return
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            // Loop through users in snapshot
+            for user in userSnapshot {
+                // Get email
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                // If email contains whats in the query and is not the current user's email
+                if email.contains(query) == true && email != Auth.auth().currentUser?.email {
+                    // Append to array of emails shown
+                    emailArray.append(email)
+                }
+                handler(emailArray)
+            }
+        }
+    }
+    
+    // Function to get ids for usernames
+    func getIds(forUsernames usernames: [String], handler: @escaping(_ uidArray: [String]) -> ()) {
+        // Create a snapshot for all usernames
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
+            // Initialize an array for ids
+            var idArray = [String]()
+            
+            // Loop through user snapshot
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for user in userSnapshot {
+                // Get email of user
+                let email = user.childSnapshot(forPath: "email").value as! String
+                
+                // if email is in array of usernames requested
+                if usernames.contains(email) {
+                    // append Id to idArray to return
+                    idArray.append(user.key)
+                }
+            }
+            
+            // Return array in handler
+            handler(idArray)
+        }
+    }
+    
+    // Function to create group in database
+    func createGroup(withTitle title: String, andDescription description: String, forUserIds ids: [String], handler: @escaping(_ createdGroup: Bool) -> ()) {
+        // Add group to Database
+        REF_GROUPS.childByAutoId().updateChildValues(["title": title, "description": description, "members": ids])
+        handler(true)
+    }
+    
+    
+    
     
 }

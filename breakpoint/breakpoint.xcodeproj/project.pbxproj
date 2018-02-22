@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1418AA6B203DC97E006C100F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA6A203DC97E006C100F /* Message.swift */; };
+		1418AA6D203DFBF8006C100F /* CreateGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA6C203DFBF8006C100F /* CreateGroupsViewController.swift */; };
+		1418AA6F203E0265006C100F /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA6E203E0265006C100F /* UserTableViewCell.swift */; };
 		14677A13203C7B6300FF4D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A12203C7B6300FF4D1D /* AppDelegate.swift */; };
 		14677A15203C7B6300FF4D1D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A14203C7B6300FF4D1D /* FeedViewController.swift */; };
 		14677A17203C7B6300FF4D1D /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A16203C7B6300FF4D1D /* GroupsViewController.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		0A9906F2476CEA36B1F9A49A /* Pods_breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1418AA6A203DC97E006C100F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1418AA6C203DFBF8006C100F /* CreateGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsViewController.swift; sourceTree = "<group>"; };
+		1418AA6E203E0265006C100F /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		14677A0F203C7B6300FF4D1D /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14677A12203C7B6300FF4D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14677A14203C7B6300FF4D1D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				14677A31203C8DB100FF4D1D /* LoginViewController.swift */,
 				14F807D6203CB29F00A84609 /* MeViewController.swift */,
 				14F807D8203CB84A00A84609 /* CreatePostViewController.swift */,
+				1418AA6C203DFBF8006C100F /* CreateGroupsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				14677A33203C8DFF00FF4D1D /* InsetTextField.swift */,
 				14677A35203C908900FF4D1D /* ShadowView.swift */,
 				14F807DC203CDD7700A84609 /* FeedTableViewCell.swift */,
+				1418AA6E203E0265006C100F /* UserTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 				14677A32203C8DB100FF4D1D /* LoginViewController.swift in Sources */,
 				14677A17203C7B6300FF4D1D /* GroupsViewController.swift in Sources */,
 				14677A13203C7B6300FF4D1D /* AppDelegate.swift in Sources */,
+				1418AA6F203E0265006C100F /* UserTableViewCell.swift in Sources */,
 				14F807D3203C939000A84609 /* AuthService.swift in Sources */,
 				14F807DD203CDD7700A84609 /* FeedTableViewCell.swift in Sources */,
 				14677A30203C8D7000FF4D1D /* AuthViewController.swift in Sources */,
@@ -314,6 +321,7 @@
 				14677A36203C908900FF4D1D /* ShadowView.swift in Sources */,
 				14F807D9203CB84A00A84609 /* CreatePostViewController.swift in Sources */,
 				14677A15203C7B6300FF4D1D /* FeedViewController.swift in Sources */,
+				1418AA6D203DFBF8006C100F /* CreateGroupsViewController.swift in Sources */,
 				14677A34203C8DFF00FF4D1D /* InsetTextField.swift in Sources */,
 				14677A2E203C82E100FF4D1D /* DataService.swift in Sources */,
 				1418AA6B203DC97E006C100F /* Message.swift in Sources */,
