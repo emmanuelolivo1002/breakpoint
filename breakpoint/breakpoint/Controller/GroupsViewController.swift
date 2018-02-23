@@ -12,18 +12,64 @@ class GroupsViewController: UIViewController {
 
     
     // MARK: Outlets
+    @IBOutlet weak var groupTableView: UITableView!
+    
+    // MARK: Variables
+    var groupsArray = [Group]()
+
     
     
-    
-    // MARK: Actions
     
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Set self as tablevieew delgate and datasource
+        groupTableView.delegate = self
+        groupTableView.dataSource = self
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Observe every time there is a change in database
+        DataService.instance.REF_GROUPS.observeSingleEvent(of: .value) { (snapshot) in
+            DataService.instance.getAllGroups { (returnedGroupsArray) in
+                // Set local groups array to be equal to the returned array and reload data
+                self.groupsArray = returnedGroupsArray
+                self.groupTableView.reloadData()
+            }
+        }
+        
+        
+       
     }
 
  
 
 }
 
+// Conform to tableview protocols
+extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groupsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = groupTableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as? GroupTableViewCell else {return UITableViewCell()}
+        
+        
+        
+        cell.configureCell(title: groupsArray[indexPath.row].groupTitle, description: groupsArray[indexPath.row].groupDescription, numberOfMembers: groupsArray[indexPath.row].memberCount)
+        
+        return cell
+    }
+    
+    
+}
