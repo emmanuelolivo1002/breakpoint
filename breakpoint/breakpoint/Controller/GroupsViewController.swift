@@ -72,4 +72,19 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    // When a row is selected show the feed for that group
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Set a storyboard for groupFeedViewController
+        guard let groupFeedViewController = storyboard?.instantiateViewController(withIdentifier: "GroupFeedViewController") as? GroupFeedViewController else { return }
+        
+        // Initialize group in groupFeedViewController by passing the group selected
+        groupFeedViewController.initData(forGroup: groupsArray[indexPath.row])
+        
+        // present groupFeedViewController
+        present(groupFeedViewController, animated: true, completion: nil)
+        
+    }
+    
+    
 }

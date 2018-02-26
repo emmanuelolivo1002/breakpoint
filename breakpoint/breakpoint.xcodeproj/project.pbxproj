@@ -12,6 +12,8 @@
 		1418AA6F203E0265006C100F /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA6E203E0265006C100F /* UserTableViewCell.swift */; };
 		1418AA71203F5317006C100F /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA70203F5317006C100F /* GroupTableViewCell.swift */; };
 		1418AA73203F603D006C100F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA72203F603D006C100F /* Group.swift */; };
+		1418AA7520406B2A006C100F /* GroupFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA7420406B2A006C100F /* GroupFeedTableViewCell.swift */; };
+		1418AA7720406B95006C100F /* GroupFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418AA7620406B95006C100F /* GroupFeedViewController.swift */; };
 		14677A13203C7B6300FF4D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A12203C7B6300FF4D1D /* AppDelegate.swift */; };
 		14677A15203C7B6300FF4D1D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A14203C7B6300FF4D1D /* FeedViewController.swift */; };
 		14677A17203C7B6300FF4D1D /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14677A16203C7B6300FF4D1D /* GroupsViewController.swift */; };
@@ -39,6 +41,8 @@
 		1418AA6E203E0265006C100F /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		1418AA70203F5317006C100F /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		1418AA72203F603D006C100F /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		1418AA7420406B2A006C100F /* GroupFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedTableViewCell.swift; sourceTree = "<group>"; };
+		1418AA7620406B95006C100F /* GroupFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedViewController.swift; sourceTree = "<group>"; };
 		14677A0F203C7B6300FF4D1D /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14677A12203C7B6300FF4D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14677A14203C7B6300FF4D1D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				14F807D6203CB29F00A84609 /* MeViewController.swift */,
 				14F807D8203CB84A00A84609 /* CreatePostViewController.swift */,
 				1418AA6C203DFBF8006C100F /* CreateGroupsViewController.swift */,
+				1418AA7620406B95006C100F /* GroupFeedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				14F807DC203CDD7700A84609 /* FeedTableViewCell.swift */,
 				1418AA6E203E0265006C100F /* UserTableViewCell.swift */,
 				1418AA70203F5317006C100F /* GroupTableViewCell.swift */,
+				1418AA7420406B2A006C100F /* GroupFeedTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,7 +329,9 @@
 				1418AA6F203E0265006C100F /* UserTableViewCell.swift in Sources */,
 				14F807D3203C939000A84609 /* AuthService.swift in Sources */,
 				14F807DD203CDD7700A84609 /* FeedTableViewCell.swift in Sources */,
+				1418AA7720406B95006C100F /* GroupFeedViewController.swift in Sources */,
 				14677A30203C8D7000FF4D1D /* AuthViewController.swift in Sources */,
+				1418AA7520406B2A006C100F /* GroupFeedTableViewCell.swift in Sources */,
 				1418AA73203F603D006C100F /* Group.swift in Sources */,
 				14F807DB203CBC5000A84609 /* UIViewExtension.swift in Sources */,
 				14677A36203C908900FF4D1D /* ShadowView.swift in Sources */,

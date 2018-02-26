@@ -65,17 +65,45 @@ class DataService {
         }
     }
     
-    // Function to upload post
+    // Function to upload post to Group or Regular Feed
     func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
         
         if groupKey != nil {
             // if group key exists send to group
+            REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
             
         } else {
             // send to feed
             REF_FEED.childByAutoId().updateChildValues(["content" : message, "senderId" : uid])
             sendComplete(true)
         }
+    }
+    
+    // Function to get all messages for specific group
+    func getAllMessages(forGroup group: Group, handler: @escaping(_ messages: [Message]) -> ()) {
+        // Instantiate a message array to store messages for the group
+        var groupMessageArray = [Message]()
+        
+        // Observe all messages in group passed
+        REF_GROUPS.child(group.groupId).child("messages").observeSingleEvent(of: .value) { (groupMessageSnapshot) in
+            
+            guard let groupMessageSnapshot = groupMessageSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            //Loop through snapshot
+            for groupMessage in groupMessageSnapshot {
+                // Get all elements of message and store them in a message object
+                let content = groupMessage.childSnapshot(forPath: "content").value as! String
+                let senderId = groupMessage.childSnapshot(forPath: "senderId").value as! String
+                let message = Message(content: content, senderId: senderId)
+                
+                // Append message to array
+                groupMessageArray.append(message)
+            }
+            // Pass array back
+            handler(groupMessageArray)
+        }
+        
     }
     
     // Function to get all messages of the Feed
@@ -155,6 +183,30 @@ class DataService {
             handler(idArray)
         }
     }
+    
+    // Funtion to get all the usernames in a group
+    func getUsernames(forGroup group: Group, handler: @escaping(_ emailArray: [String]) -> ()) {
+        //Initialize array to be passed back
+        var emailArray = [String]()
+        
+        REF_USERS.observeSingleEvent(of: .value) { (usernamesSnapshot) in
+            // Loop through user snapshot
+            guard let usernamesSnapshot = usernamesSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for user in usernamesSnapshot {
+                // if userId of current iteration is in group
+                if group.members.contains(user.key) {
+                    // Set an email and append to variable
+                    let email = user.childSnapshot(forPath: "email").value as! String
+                    
+                    emailArray.append(email)
+                }
+            }
+            // pass back email array
+            handler(emailArray)
+        }
+    }
+    
     
     // Function to create group in database
     func createGroup(withTitle title: String, andDescription description: String, forUserIds ids: [String], handler: @escaping(_ createdGroup: Bool) -> ()) {
